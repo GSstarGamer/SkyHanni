@@ -2,6 +2,7 @@ package at.hannibal2.skyhanni.config
 
 import at.hannibal2.skyhanni.SkyHanniMod
 import at.hannibal2.skyhanni.config.features.About
+import at.hannibal2.skyhanni.config.features.Xtra
 import at.hannibal2.skyhanni.config.features.chat.ChatConfig
 import at.hannibal2.skyhanni.config.features.combat.CombatConfig
 import at.hannibal2.skyhanni.config.features.crimsonisle.CrimsonIsleConfig
@@ -135,6 +136,10 @@ class Features : Config() {
     @Expose
     @Category(name = "Dev", desc = "Debug and test stuff. Developers are cool.")
     var dev: DevConfig = DevConfig()
+
+    @Expose
+    @Category(name = "Xtra", desc = "Xtra shi made by GS")
+    var xtra: Xtra = Xtra()
 
     @Expose
     var storage: Storage = Storage()
