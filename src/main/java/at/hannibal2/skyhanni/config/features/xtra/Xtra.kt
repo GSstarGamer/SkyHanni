@@ -1,7 +1,9 @@
 package at.hannibal2.skyhanni.config.features.xtra
 
+import at.hannibal2.skyhanni.config.FeatureToggle
 import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.annotations.Accordion
+import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorBoolean
 import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
 
 class Xtra {
@@ -10,7 +12,14 @@ class Xtra {
 //     @Transient
 //     var currentVersion: Unit? = null
 
-
+    @Expose
+    @ConfigOption(
+        name = "Anti seed break",
+        desc = "Does not break pumpkin/melon stems",
+    )
+    @ConfigEditorBoolean
+    @FeatureToggle
+    var antiStemBreak: Boolean = true
 
     @Expose
     @ConfigOption(name = "Pitch / Yaw", desc = "")
