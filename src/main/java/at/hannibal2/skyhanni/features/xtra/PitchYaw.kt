@@ -6,7 +6,6 @@ import at.hannibal2.skyhanni.events.minecraft.KeyDownEvent
 import at.hannibal2.skyhanni.skyhannimodule.SkyHanniModule
 import at.hannibal2.skyhanni.utils.ChatUtils
 import at.hannibal2.skyhanni.utils.LocationUtils
-import at.hannibal2.skyhanni.utils.NeuItems
 import at.hannibal2.skyhanni.utils.compat.MinecraftCompat
 import net.minecraft.client.Minecraft
 
@@ -17,7 +16,7 @@ object PitchYaw {
     @HandleEvent()
     fun onKeyDown(event: KeyDownEvent) {
         if (Minecraft.getMinecraft().currentScreen != null) return
-
+        if (!config.pitchYawSnap) return
 
 
         when (event.keyCode) {
@@ -51,12 +50,12 @@ object PitchYaw {
         }
     }
 
-    public fun set(yaw: Float, pitch: Float) {
+    fun set(yaw: Float, pitch: Float) {
         val plr = Minecraft.getMinecraft().thePlayer
         plr.setPositionAndRotation(plr.posX, plr.posY, plr.posZ, yaw, pitch)
     }
 
-    public fun current(): Pair<Float, Float> {
+    fun current(): Pair<Float, Float> {
         val player = MinecraftCompat.localPlayer
         val yaw = LocationUtils.calculatePlayerYaw()
         val pitch = player.rotationPitch

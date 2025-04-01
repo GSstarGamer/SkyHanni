@@ -1,9 +1,7 @@
 package at.hannibal2.skyhanni.config.features.xtra
 
-import at.hannibal2.skyhanni.config.features.garden.GardenCommandsConfig
 import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.annotations.Accordion
-import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorBoolean
 import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
 
 class Xtra {
