@@ -1,15 +1,10 @@
-package at.hannibal2.skyhanni.config.features
+package at.hannibal2.skyhanni.config.features.xtra
 
-import at.hannibal2.skyhanni.config.FeatureToggle
-import at.hannibal2.skyhanni.features.misc.update.ConfigVersionDisplay
-import at.hannibal2.skyhanni.utils.OSUtils.openBrowser
+import at.hannibal2.skyhanni.config.features.garden.GardenCommandsConfig
 import com.google.gson.annotations.Expose
 import io.github.notenoughupdates.moulconfig.annotations.Accordion
 import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorBoolean
-import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorButton
-import io.github.notenoughupdates.moulconfig.annotations.ConfigEditorDropdown
 import io.github.notenoughupdates.moulconfig.annotations.ConfigOption
-import io.github.notenoughupdates.moulconfig.observer.Property
 
 class Xtra {
 //     @ConfigOption(name = "Current Version", desc = "This is the SkyHanni version you are currently running")
@@ -17,10 +12,14 @@ class Xtra {
 //     @Transient
 //     var currentVersion: Unit? = null
 
-    @ConfigOption(name = "Look at command", desc = "use /lookat <yaw> <pitch>")
+
+
     @Expose
-    @ConfigEditorBoolean
-    var lookAtToggle: Boolean = true
+    @ConfigOption(name = "Pitch / Yaw", desc = "")
+    @Accordion
+    var pitchYaw: pitchYawConfig = pitchYawConfig()
+
+
 //
 //     @ConfigOption(name = "Auto Updates", desc = "Automatically download new version on each startup")
 //     @Expose
