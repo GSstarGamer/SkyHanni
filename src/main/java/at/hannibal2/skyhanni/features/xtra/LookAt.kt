@@ -22,7 +22,7 @@ object LookAt {
                     ChatUtils.userError("Invalid yaw or pitch.")
                 } else {
                     PitchYaw.set(yaw, pitch)
-                    ChatUtils.chat("§aSet yaw to §e$yaw§2 and pitch to §e$pitch§2")
+                    ChatUtils.chat("§aSet yaw to §e$yaw§e and pitch to §e$pitch§e")
                 }
             } else {
                 ChatUtils.userError("Must be enabled in the Xtra settings")
