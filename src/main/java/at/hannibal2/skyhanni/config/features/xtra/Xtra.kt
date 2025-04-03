@@ -26,7 +26,10 @@ class Xtra {
     @Accordion
     var pitchYaw: pitchYawConfig = pitchYawConfig()
 
-
+    @Expose
+    @ConfigOption(name = "ESP", desc = "")
+    @Accordion
+    var esp: ESP = ESP()
 //
 //     @ConfigOption(name = "Auto Updates", desc = "Automatically download new version on each startup")
 //     @Expose
